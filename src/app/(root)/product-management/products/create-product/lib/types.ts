@@ -1,0 +1,30 @@
+export interface IProductPost {
+  title: string;
+  titleBn?: string | null;
+  subTitle?: string | null;
+  subTitleBn?: string | null;
+  description: string;
+  descriptionBn: string;
+  price: number;
+  originalPrice?: number | null;
+  discount?: number | null;
+  finalPrice: number;
+  stock?: number | null;
+  lowStockAlert?: number | null;
+  restockDate?: Date | null;
+  unitType: "KG" | "LITER" | "PIECES" | "METER" | "GRAM" | "ML" | "other";
+  categoryId: string;
+  activeStatus?: number;
+  createdBy: string;
+  slug?: string | null;
+  slugBn?: string | null;
+  metaTitle?: string | null;
+  metaTitleBn?: string | null;
+  metaDescription?: string | null;
+  metaDescriptionBn?: string | null;
+  tags: string[];
+  tagsBn?: string[];
+  variants?: Record<string, unknown> | null;
+  averageRating?: number | null;
+  images: Array<object>;
+}
